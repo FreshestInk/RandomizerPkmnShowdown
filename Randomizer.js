@@ -136,7 +136,7 @@ const type = ["Normal" ,"Fighting" ,"Flying" ,"Poison" ,"Ground" ,"Rock" ,"Bug" 
 const nature = ["Hardy" ,"Lonely" ,"Brave" ,"Adamant" ,"Naughty" ,"Bold" ,"Docile" ,"Relaxed" ,"Impish" ,"Lax" ,"Timid" ,"Hasty" ,"Serious" ,"Jolly" ,"Naive" ,"Modest" ,"Mild" ,"Quiet" ,"Bashful" ,"Rash" ,"Calm" ,"Gentle" ,"Sassy" ,"Careful" ,"Quirky" ,]
 
 // Random Pokemon
-const P = Amn[Math.floor(Math.random() * Amn.length)];
+// const P = Amn[Math.floor(Math.random() * Amn.length)];
 
 // determines shine
 const shiny = [0, 1]

@@ -3,12 +3,16 @@
 
 <head>
     <script type="text/javascript" src="Randomizer.js"></script>
+    <script type="text/javascript" src="E:\RandomizerPkmnShowdown\Randomizer.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
 </head>
 
 <body>
+
+
+
     <main>
         <div>
 
@@ -19,29 +23,19 @@
 
         <div>
             <button onclick="generate()">Generate</button>
-            <button onclick="myFunction()">Copy</button>
-            <p id="myInput">
-                <script>
-                    function myFunction() {
-                        // Get the text field
-                        var copyText = document.getElementById("myInput");
+            <button onclick="copyDivToClipboard()">Copy</button>
 
-                        // Select the text field
-                        copyText.select();
-                        copyText.setSelectionRange(0, 99999); // For mobile devices
+          
+            <p id = "a">
 
-                        // Copy the text inside the text field
-                        navigator.clipboard.writeText(copyText.value);
-
-                        // Alert the copied text
-                        alert("Copied the text: " + copyText.value);
-                    }
-                </script>
                 <script>
                     function generate() {
                         location.reload()
 
                     }
+                </script>
+
+
                 </script>
                 <script>
                     document.write(Poke(1));
@@ -105,8 +99,26 @@
                 </script>
 
             </p>
+            
+
         </div>
     </main>
+
+
+    <script>
+        function copyDivToClipboard() {
+            var range = document.createRange();
+            range.selectNode(document.getElementById("a"));
+            window.getSelection().removeAllRanges(); // clear current selection
+            window.getSelection().addRange(range); // to select text
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();// to deselect
+        }
+    </script>
+
+
+
+
 </body>
 
 
