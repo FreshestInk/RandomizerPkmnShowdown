@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript"
-        src="Randomizer.js"></script>
+    <script type="text/javascript" src="Randomizer.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
 
@@ -11,23 +10,39 @@
 
 <body>
     <main>
-<div>
+        <div>
 
-    <h1> Generate </h1> </br>
-   
+            <h1> Generate </h1> </br>
 
-</div>
 
-        <div> 
+        </div>
+
+        <div>
             <button onclick="generate()">Generate</button>
             <button onclick="myFunction()">Copy</button>
-            <p id="myInput"> 
-<script>
-                function generate(){
-location.reload()
- 
- }
-      </script>
+            <p id="myInput">
+                <script>
+                    function myFunction() {
+                        // Get the text field
+                        var copyText = document.getElementById("myInput");
+
+                        // Select the text field
+                        copyText.select();
+                        copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                        // Copy the text inside the text field
+                        navigator.clipboard.writeText(copyText.value);
+
+                        // Alert the copied text
+                        alert("Copied the text: " + copyText.value);
+                    }
+                </script>
+                <script>
+                    function generate() {
+                        location.reload()
+
+                    }
+                </script>
                 <script>
                     document.write(Poke(1));
                     document.write("Ability: " + Abby(1));
